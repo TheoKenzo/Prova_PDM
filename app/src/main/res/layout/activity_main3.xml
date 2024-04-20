@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDD874"
+    tools:context=".view.MainActivity3">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="41dp"
+        android:text="Cadastro"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ET_CPF_Tela03"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Prova PDM - Theo Kenzo de Araújo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ET_CPF_Tela03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="CPF"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ET_Nome_Tela03"
+        app:layout_constraintStart_toStartOf="@+id/ET_Nome_Tela03" />
+
+    <EditText
+        android:id="@+id/ET_Telefone_Tela03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="292dp"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ET_Email_Tela03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/ET_Telefone_Tela03"
+        app:layout_constraintTop_toBottomOf="@+id/ET_Telefone_Tela03" />
+
+    <EditText
+        android:id="@+id/ET_Nome_Tela03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="7dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ET_Telefone_Tela03"
+        app:layout_constraintStart_toStartOf="@+id/ET_Telefone_Tela03" />
+
+    <Button
+        android:id="@+id/BT_Cadastrarse_Tela03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="38dp"
+        android:text="Cadastrar-se"
+        app:layout_constraintEnd_toEndOf="@+id/ET_Email_Tela03"
+        app:layout_constraintTop_toBottomOf="@+id/ET_Email_Tela03" />
+
+    <Button
+        android:id="@+id/BT_Voltar_Tela03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:background="#00FFFFFF"
+        android:text="Voltar"
+        android:textColor="#3E8AFB"
+        app:layout_constraintStart_toStartOf="@+id/BT_Cadastrarse_Tela03"
+        app:layout_constraintTop_toBottomOf="@+id/BT_Cadastrarse_Tela03" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

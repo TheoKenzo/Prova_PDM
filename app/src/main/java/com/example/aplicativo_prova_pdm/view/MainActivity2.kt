@@ -10,26 +10,32 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicativo_prova_pdm.R
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
 
-    lateinit var cpf: EditText
-    lateinit var verConta: Button
-    lateinit var fazerPedido: Button
-    lateinit var criarConta:Button
+    lateinit var cpf: TextView
+    lateinit var nome: EditText
+    lateinit var telefone: EditText
+    lateinit var email: EditText
+    lateinit var atualizar: Button
+    lateinit var deletarConta: Button
+    lateinit var voltar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        cpf = findViewById(R.id.ET_CPF_Tela01)
-        verConta = findViewById(R.id.BT_Ver_Conta_Tela01)
-        fazerPedido = findViewById(R.id.BT_Fazer_Pedido_Tela01)
-        criarConta = findViewById(R.id.BT_Criar_Conta_Tela01)
+        cpf = findViewById(R.id.TV_CPF_Tela02)
+        nome = findViewById(R.id.ET_Nome_Tela02)
+        telefone = findViewById(R.id.ET_Telefone_Tela02)
+        email = findViewById(R.id.ET_Email_Tela02)
+        atualizar = findViewById(R.id.BT_Atualizar_Tela02)
+        deletarConta = findViewById(R.id.BT_Deletar_Conta_Tela02)
+        voltar = findViewById(R.id.BT_Voltar_Tela02)
     }
 }

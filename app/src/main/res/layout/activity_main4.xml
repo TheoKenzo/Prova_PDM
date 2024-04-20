@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDD874"
+    tools:context=".view.MainActivity4">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="337dp"
+        android:text="Prova PDM - Theo Kenzo de Araújo"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/LV_Pedidos_Tela04"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/BT_Voltar_Tela04"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BT_FazerPedido_Tela04" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="4dp"
+        android:text="Seus Pedidos:"
+        app:layout_constraintBottom_toTopOf="@+id/LV_Pedidos_Tela04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/BT_Deletar_Tela04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="Deletar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BT_Voltar_Tela04"
+        app:layout_constraintEnd_toStartOf="@+id/BT_Voltar_Tela04"
+        app:layout_constraintStart_toEndOf="@+id/BT_Atualizar_Tela04" />
+
+    <Button
+        android:id="@+id/BT_Atualizar_Tela04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="71dp"
+        android:text="Atualizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/BT_Deletar_Tela04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LV_Pedidos_Tela04"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/BT_Voltar_Tela04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/BT_Deletar_Tela04"
+        app:layout_constraintTop_toBottomOf="@+id/LV_Pedidos_Tela04" />
+
+    <EditText
+        android:id="@+id/ET_TipoDeQueijo_Texto04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Tipo de Recheio"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ET_PesoDeQueijo_Tela04"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_CPF_Tela04" />
+
+    <TextView
+        android:id="@+id/TV_CPF_Tela04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="19dp"
+        android:text="CPF:"
+        app:layout_constraintBottom_toTopOf="@+id/ET_TipoDeQueijo_Texto04"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/BT_FazerPedido_Tela04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="76dp"
+        android:text="Fazer Pedido"
+        app:layout_constraintBottom_toTopOf="@+id/LV_Pedidos_Tela04"
+        app:layout_constraintEnd_toEndOf="@+id/ET_PesoDeQueijo_Tela04"
+        app:layout_constraintTop_toBottomOf="@+id/ET_PesoDeQueijo_Tela04" />
+
+    <EditText
+        android:id="@+id/ET_PesoDeQueijo_Tela04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Peso de Queijo "
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/BT_FazerPedido_Tela04"
+        app:layout_constraintStart_toStartOf="@+id/ET_TipoDeQueijo_Texto04"
+        app:layout_constraintTop_toBottomOf="@+id/ET_TipoDeQueijo_Texto04" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="22dp"
+        android:text="Pedidos"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/TV_CPF_Tela04"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
