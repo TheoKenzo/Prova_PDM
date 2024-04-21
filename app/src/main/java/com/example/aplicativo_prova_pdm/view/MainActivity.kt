@@ -1,14 +1,18 @@
 package com.example.aplicativo_prova_pdm.view
 
+import Cliente
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.aplicativo_prova_pdm.R
+import com.example.aplicativo_prova_pdm.controller.ControllerCliente
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,5 +35,37 @@ class MainActivity : AppCompatActivity() {
         verConta = findViewById(R.id.BT_Ver_Conta_Tela01)
         fazerPedido = findViewById(R.id.BT_Fazer_Pedido_Tela01)
         criarConta = findViewById(R.id.BT_Criar_Conta_Tela01)
+
+        val ControllerCliente = ControllerCliente(this)
+
+        verConta.setOnClickListener{
+            if(ControllerCliente.existeCliente(cpf.text.toString())){
+                Toast.makeText(applicationContext,"Não Foi Possível Lhe Encontrar!",Toast.LENGTH_SHORT).show()
+                cpf.text.clear()
+            }else{
+                Intent(this, MainActivity2::class.java).let{
+                    it.putExtra("cpf", cpf.text.toString())
+                    startActivity(it)
+                }
+            }
+        }
+
+        fazerPedido.setOnClickListener{
+            if(ControllerCliente.existeCliente(cpf.text.toString())){
+                Toast.makeText(applicationContext,"Não Foi Possível Lhe Encontrar!",Toast.LENGTH_SHORT).show()
+                cpf.text.clear()
+            }else{
+                Intent(this, MainActivity4::class.java).let{
+                    it.putExtra("cpf", cpf.text.toString())
+                    startActivity(it)
+                }
+            }
+        }
+
+        criarConta.setOnClickListener{
+            Intent(this, MainActivity3::class.java).let{
+                startActivity(it)
+            }
+        }
     }
 }

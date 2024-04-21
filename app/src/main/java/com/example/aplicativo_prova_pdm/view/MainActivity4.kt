@@ -40,5 +40,9 @@ class MainActivity4 : AppCompatActivity() {
         atualizar = findViewById(R.id.BT_Atualizar_Tela04)
         deletar = findViewById(R.id.BT_Deletar_Tela04)
         voltar = findViewById(R.id.BT_Voltar_Tela04)
+
+        voltar.setOnClickListener{
+            this.finish()
+        }
     }
 }
