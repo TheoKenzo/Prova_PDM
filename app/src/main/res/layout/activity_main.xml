@@ -14,9 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="74dp"
+        android:layout_marginBottom="460dp"
         android:text="Prova PDM - Theo Kenzo de Araújo"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/LV_Contas_Tela01"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -91,5 +91,25 @@
         app:layout_constraintBottom_toTopOf="@+id/BT_Fazer_Pedido_Tela01"
         app:layout_constraintStart_toStartOf="@+id/BT_Ver_Conta_Tela01"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <ListView
+        android:id="@+id/LV_Contas_Tela01"
+        android:layout_width="387dp"
+        android:layout_height="207dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clientes:"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="493dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -66,16 +66,6 @@ class ControllerPedidoPamonha(context: Context) {
         return confirmaAtualizacao > 0
     }
 
-    fun delete(idPamonha: Int): Boolean{
-        val funEscrita = DAO.writableDatabase
-
-        val confirmaExclusao = funEscrita.delete("PedidoPamonha", "idPamonha = ?", arrayOf(idPamonha.toString()))
-
-        funEscrita.close()
-
-        return confirmaExclusao > 0
-    }
-
     fun deleteByCPF(fk_cpf: String): Boolean{
         val funEscrita = DAO.writableDatabase
 
@@ -84,5 +74,11 @@ class ControllerPedidoPamonha(context: Context) {
         funEscrita.close()
 
         return confirmaExclusao > 0
+    }
+
+    fun existePedidoPamonha(fk_cpf: String): Boolean{
+        val listaPedidosPamonha = selectAll()
+
+        return listaPedidosPamonha?.filter { it.fk_cpf == fk_cpf }.orEmpty().isEmpty()
     }
 }

@@ -13,6 +13,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.aplicativo_prova_pdm.R
 import com.example.aplicativo_prova_pdm.controller.ControllerCliente
 import com.example.aplicativo_prova_pdm.controller.ControllerPedidoPamonha
+import android.os.Environment
+import java.io.File
 
 class MainActivity2 : AppCompatActivity() {
 
