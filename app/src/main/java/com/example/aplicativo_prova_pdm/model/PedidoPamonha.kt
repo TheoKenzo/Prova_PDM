@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class PedidoPamonha(private var idPamonha: Int, private var tipoDeRecheio: String, private var pesoDeQueijo: Float, private var fk_cpf: String): Parcelable {
+class PedidoPamonha(var idPamonha: Int, var tipoDeRecheio: String, var pesoDeQueijo: Float, var fk_cpf: String): Parcelable {
     override fun toString(): String {
         return ("ID: $idPamonha | Recheio: $tipoDeRecheio | PesoQueijo: $pesoDeQueijo")
     }

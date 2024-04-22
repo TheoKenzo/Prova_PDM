@@ -1,12 +1,12 @@
 package com.example.aplicativo_prova_pdm.controller
 
 import Cliente
-import ClienteDAO
 import android.content.ContentValues
 import android.content.Context
+import com.example.aplicativo_prova_pdm.model.dao.BancoDAO
 
 class ControllerCliente(context: Context) {
-    private val DAO: ClienteDAO = ClienteDAO(context)
+    private val DAO: BancoDAO = BancoDAO(context)
 
     fun selectAll(): ArrayList<Cliente>? {
         val clientes: ArrayList<Cliente> = ArrayList()
@@ -64,6 +64,16 @@ class ControllerCliente(context: Context) {
 
         funEscrita.close()
         return confirmaAtualizacao > 0
+    }
+
+    fun delete(cpf: String): Boolean{
+        val funEscrita = DAO.writableDatabase
+
+        val confirmaExclusao = funEscrita.delete("Cliente", "cpf = ?", arrayOf(cpf))
+
+        funEscrita.close()
+
+        return confirmaExclusao > 0
     }
 
     fun existeCliente(cpf: String): Boolean{
